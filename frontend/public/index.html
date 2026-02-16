@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#030712" />
+
+  <!-- Primary Meta Tags -->
+  <title>Vineet Vora | ML Engineer & Full-Stack Developer</title>
+  <meta name="title" content="Vineet Vora | ML Engineer & Full-Stack Developer" />
+  <meta name="description" content="Vineet Vora — ML Engineer and Full-Stack Developer specializing in deep learning, distributed systems, and computer vision. MS in AI at NJIT. Building production-grade ML pipelines, fine-tuning Vision Transformers, and processing 118M+ records on Hadoop/AWS." />
+  <meta name="keywords" content="Vineet Vora, ML Engineer, Full Stack Developer, AI Researcher, NJIT, PyTorch, Machine Learning, Computer Vision, Deep Learning, Portfolio" />
+  <meta name="author" content="Vineet Vora" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.vineetvora.dev/" />
+  <meta property="og:title" content="Vineet Vora | ML Engineer & Full-Stack Developer" />
+  <meta property="og:description" content="Systems-minded ML builder turning ideas into measurable, scalable systems. Fine-tuning Vision Transformers, processing 118M+ records, and shipping production ML." />
+  <meta property="og:image" content="https://www.vineetvora.dev/vineet.jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Vineet Vora Portfolio" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://www.vineetvora.dev/" />
+  <meta property="twitter:title" content="Vineet Vora | ML Engineer & Full-Stack Developer" />
+  <meta property="twitter:description" content="Systems-minded ML builder turning ideas into measurable, scalable systems. MS in AI @ NJIT." />
+  <meta property="twitter:image" content="https://www.vineetvora.dev/vineet.jpeg" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.vineetvora.dev/" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Vineet Vora",
+    "url": "https://www.vineetvora.dev",
+    "jobTitle": "ML Engineer & Full-Stack Developer",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "New Jersey Institute of Technology"
+    },
+    "sameAs": [
+      "https://github.com/VineetV2",
+      "https://www.linkedin.com/in/vineetv2/"
+    ],
+    "email": "vineet.vora123@gmail.com",
+    "description": "ML Engineer and Full-Stack Developer specializing in deep learning, distributed systems, and computer vision."
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Preloader styles (inline for instant render) -->
+  <style>
+    #preloader {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: #030712;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+    #preloader.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .loader-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #F8FAFC;
+      letter-spacing: -0.02em;
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeSlideUp 0.8s 0.2s forwards;
+    }
+    .loader-name span { color: #0EF6CC; }
+    .loader-bar-container {
+      width: 200px;
+      height: 2px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 1px;
+      overflow: hidden;
+    }
+    .loader-bar {
+      height: 100%;
+      width: 0;
+      background: #0EF6CC;
+      border-radius: 1px;
+      animation: loadProgress 1.8s 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .loader-percent {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.75rem;
+      color: rgba(148,163,184,0.5);
+      margin-top: 1rem;
+      letter-spacing: 0.1em;
+      opacity: 0;
+      animation: fadeSlideUp 0.6s 0.6s forwards;
+    }
+    @keyframes loadProgress {
+      0% { width: 0; }
+      40% { width: 60%; }
+      80% { width: 90%; }
+      100% { width: 100%; }
+    }
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader-name">vineet<span>.</span>vora</div>
+    <div class="loader-bar-container">
+      <div class="loader-bar"></div>
+    </div>
+    <div class="loader-percent">loading</div>
+  </div>
+
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+
+  <script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        var preloader = document.getElementById('preloader');
+        if (preloader) {
+          preloader.classList.add('hidden');
+          setTimeout(function() { preloader.remove(); }, 600);
+        }
+      }, 2200);
+    });
+  </script>
+</body>
+</html>
